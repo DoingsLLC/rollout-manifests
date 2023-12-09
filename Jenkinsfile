@@ -1,7 +1,7 @@
 node {
     def app
     
-    env.IMAGE = 'laly9999/bluegreen-rollout'
+    env.IMAGE = 'doingsllc/blue-green-rollout:latest'
 
     stage('Clone repository') {
              git branch: 'main', url: 'https://github.com/DoingsLLC/rollout-manifests.git'  
