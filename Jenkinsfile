@@ -4,7 +4,7 @@ node {
     env.IMAGE = 'laly9999/bluegreen-rollout'
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/lily4499/rollout-manifests.git'  
+             git branch: 'main', url: 'https://github.com/DoingsLLC/rollout-manifests.git'  
     }
 
     stage('Update GIT') {
