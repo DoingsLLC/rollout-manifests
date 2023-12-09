@@ -4,7 +4,7 @@ node {
     env.IMAGE = 'doingsllc/blue-green-rollout'
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/DoingsLLC/rollout-manifests.git'  
+             git branch: 'main', url: 'https://github.com/DoingsLLC/rollout-manifests-blue-green.git'  
     }
 
     stage('Update GIT') {
