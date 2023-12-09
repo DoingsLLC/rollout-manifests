@@ -10,10 +10,10 @@ node {
     stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    withCredentials([usernamePassword(credentialsId: 'karo-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'Doings_Docker_token', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
-                        sh "git config user.email ooghenekaro@yahoo.com"
-                        sh "git config user.name ooghenekaro"
+                        sh "git config user.email peterobijiofor@gmail.com"
+                        sh "git config user.name doingsllc"
                         //sh "git switch master"
                         sh "cat rollout.yml"
                         sh "sed -i 's+${IMAGE}.*+${IMAGE}:${DOCKERTAG}+g' rollout.yml"
